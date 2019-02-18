@@ -8,6 +8,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+import hu.bme.mit.train.*;
 
 public class TrainSystemTest {
 
@@ -54,6 +55,16 @@ public class TrainSystemTest {
 	public void TestGetSpeedLimit() {
 		controller.setSpeedLimit(40);
 		Assert.assertEquals(40,controller.getSpeedLimit());
+	}
+
+	@Test
+	public void TachographTest() {
+		Tachograph table = new Tachograph();
+		Date dys = new Date();
+
+		table.addTabelElement(dys, 5, 7);
+
+		Assert.assertFalse(table.isEmpty());
 	}
 
 	
