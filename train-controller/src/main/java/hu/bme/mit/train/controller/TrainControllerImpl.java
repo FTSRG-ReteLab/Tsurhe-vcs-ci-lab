@@ -48,7 +48,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getSpeedLimit() {
-		return this.speedLimit;
+		return this.step;
 	}
 
 }
