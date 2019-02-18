@@ -36,7 +36,7 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void enforceSpeedLimit() {
-		if (referenceSpeed < speedLimit) {
+		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
 	}
@@ -48,7 +48,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public int getSpeedLimit() {
-		return this.referenceSpeed;
+		return this.speedLimit;
 	}
 
 }
