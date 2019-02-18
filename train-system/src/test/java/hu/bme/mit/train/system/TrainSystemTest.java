@@ -1,5 +1,6 @@
 package hu.bme.mit.train.system;
 
+import hu.bme.mit.train.controller.Tachograph;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,7 +9,8 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
-import hu.bme.mit.train.*;
+
+import java.util.Date;
 
 public class TrainSystemTest {
 
@@ -62,7 +64,7 @@ public class TrainSystemTest {
 		Tachograph table = new Tachograph();
 		Date dys = new Date();
 
-		table.addTabelElement(dys, 5, 7);
+		table.addTableElement(dys, 5, 7);
 
 		Assert.assertFalse(table.isEmpty());
 	}

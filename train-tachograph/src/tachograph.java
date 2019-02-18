@@ -1,4 +1,4 @@
-package hu.bme.mit.train.tachograph;
+package hu.bme.mit.train.TrainUser;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
